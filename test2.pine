@@ -1,2 +1,0 @@
-def (myVar ;: true)
-if(myVar :: print("true") :: print("false"))
