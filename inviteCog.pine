@@ -1,0 +1,8 @@
+load("discord")
+
+discord.addCommand("invite"::
+    do(
+        discord.createEmbed(inviteEmbed :: "Invite me to your server!" ;: "use [this link](https://discord.com/api/oauth2/authorize?client_id=838548947961774082&permissions=8&scope=bot) to add me!" ;: 0x93bfe6)
+        msg.send(inviteEmbed)
+    )
+)

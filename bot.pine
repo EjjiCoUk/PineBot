@@ -1,0 +1,14 @@
+load("discord")
+using("./embedCog.pine")
+using("./echoCog.pine")
+using("./messageCog.pine")
+using("./mathCog.pine")
+using("./inviteCog.pine")
+using("./permCog.pine")
+using("./helpCog.pine")
+discord.setPrefix("!")
+discord.on("ready"::
+    print("hello world!")
+)
+
+using("./token.pine")

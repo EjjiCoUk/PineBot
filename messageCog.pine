@@ -1,0 +1,21 @@
+load("discord")
+
+discord.on("message" :: list(msg ;: args)
+    do (
+        def(cmdUsed :: discord.processCommands(msg.content))
+        if (cmdUsed :: pass ::
+            if (==(msg.content.startsWith(discord.prefix) ;: dark) :: pass ::
+                msg.send("This isn't a command, run `!help`"))
+        )
+        if (msg.content.startsWith("https://tenor.com") :: do(
+            if (includes(msg.content ;: "fuck") :: do(msg.send("This is an inapropriate GIF.") ;: msg.delete()) ::
+                if (includes (msg.content ;: "shit") :: do(msg.send("This is an inapropriate GIF.") ;: msg.delete()) ::
+                    do(
+                        msg.delete()
+                        msg.send(args.(0))
+                    )
+                )
+            )
+        ) :: pass) #closes do statement and if statement#
+    )
+)

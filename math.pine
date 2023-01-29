@@ -1,0 +1,32 @@
+def(op :: input("Enter an operation: "))
+def(num1 :: int(input("Enter first number: ")))
+def(num2 :: int(input("Enter second number: ")))
+
+if (==(op ;: "+") ::
+    do(
+        def(res :: +(num1 ;: num2))
+        print(res)
+    ) ::
+    pass
+)
+if (==(op ;: "-") ::
+    do(
+        def(res :: -(num1 ;: num2))
+        print(res)
+    ) ::
+    pass
+)
+if (==(op ;: "*") ::
+    do(
+        def(res :: *(num1 ;: num2))
+        print(res)
+    ) ::
+    pass
+)
+if (==(op ;: "/") ::
+    do(
+        def(res :: /(num1 ;: num2))
+        print(res)
+    ) ::
+    pass
+)

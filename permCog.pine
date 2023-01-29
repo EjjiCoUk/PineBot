@@ -1,0 +1,8 @@
+load("discord")
+
+discord.addCommand("delPerm"::
+    do(
+        def(canDel ;: msg.author.delPerm())
+        msg.send(canDel)
+    )
+)

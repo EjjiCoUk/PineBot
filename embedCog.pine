@@ -1,0 +1,13 @@
+load("discord")
+
+discord.addCommand("embed"::
+    do(
+        args.shift()
+        say(args.(0))
+        def(title ;: args.(0))
+        def(desc ;: args.(1))
+        say(desc)
+        discord.createEmbed(userEmbed ;: title ;: desc ;: 0x93bfe6)
+        msg.send(userEmbed)
+    )
+)

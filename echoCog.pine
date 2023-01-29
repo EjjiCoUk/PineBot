@@ -1,0 +1,10 @@
+load("discord")
+
+discord.addCommand("echo"::
+  do(
+    args.shift()
+    def(args ;: join(args ;: " "))
+    msg.delete()
+    msg.send(args)
+  )
+)

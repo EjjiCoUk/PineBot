@@ -1,0 +1,12 @@
+load("discord")
+
+discord.addCommand("help"::
+    do(
+        discord.createEmbed(helpEmbed :: "Help command for Pine Bot" ;: "Thanks for using Pine Bot <3" ;: 0x93bfe6)
+        helpEmbed.addField("Echo command" ;: "```!echo <args>```" ;: true)
+        helpEmbed.addField("Math Commands" ;: "```!<command> <num1> <num2> ;: add, subtract, multiply, divide```" ;: true)
+        helpEmbed.addField("Embed command" ;: "```!embed <arg1> <arg2> `note that the embed command only supports 1 work args as of now```" ;: true)
+        helpEmbed.addField("Invite command" ;: "```!invite```" ;: true)
+        msg.send(helpEmbed)
+    )
+)
